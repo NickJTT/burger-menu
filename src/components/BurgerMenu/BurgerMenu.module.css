@@ -1,0 +1,29 @@
+div.burgerMenu, div.burgerMenuOpen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+ 
+div.burgerMenu span, div.burgerMenuOpen span {
+  width: 32px;
+  height: 2px;
+  background-color: black;
+  transform-origin: 1px 1px;
+  transition: all 0.2s linear;
+}
+
+div.burgerMenuOpen span:first-child {
+  transform: rotateZ(45deg);
+}
+
+div.burgerMenuOpen span:nth-child(2) {
+  opacity: 0;
+}
+
+div.burgerMenuOpen span:last-child {
+  transform: rotateZ(-45deg);
+}
